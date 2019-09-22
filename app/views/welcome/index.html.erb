@@ -1,0 +1,17 @@
+<%= link_to "Generate blank ppt", welcome_generate_blank_path, class: "btn btn-primary btn-lg btn-space" %>
+
+<br >
+
+<%= link_to "Generate hardcoded content ppt", welcome_generate_hardcoded_path, class: "btn btn-primary btn-lg btn-space" %>
+
+<br ><br ><br >
+
+<%= form_tag '/welcome/process_info' do -%>
+    <%=label_tag 'title' %>
+    <%=text_field_tag 'title'%>
+
+    <%=label_tag 'subtitle' %>
+    <%=text_field_tag 'subtitle'%>
+
+    <div><%= submit_tag 'Save' %></div>
+<% end -%>
